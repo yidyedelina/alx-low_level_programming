@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+git add .
+git commit -m "alx-low_level_programming hello_world"
+git push
