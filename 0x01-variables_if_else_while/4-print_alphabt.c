@@ -2,25 +2,19 @@
 
 /**
  * main - Entry point
- * Description - print all lowercase and uppercase alphabet
+ * Description - print all lowercase alphabet except e and q
  * Return: always 0 (success)
  */
 int main(void)
 {
 	char a;
-	char b;
 
 	a = 'a';
-	b = 'A';
 	while (a <= 'z')
 	{
-		putchar(a);
+		if (a != 'q' && a != 'e')
+			putchar(a);
 		a++;
-	}
-	while (b <= 'Z')
-	{
-		putchar(b);
-		b++;
 	}
 	putchar('\n');
 	return (0);
