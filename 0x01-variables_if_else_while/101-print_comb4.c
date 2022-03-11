@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry Point
- * Description - combination of any three digit number
- * Return - always 0 (success)
+ * main - Entry point
+ * Description - print all three digit combination
+ * Return: always 0 (success)
  */
 int main(void)
 {
@@ -28,5 +28,6 @@ int main(void)
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
