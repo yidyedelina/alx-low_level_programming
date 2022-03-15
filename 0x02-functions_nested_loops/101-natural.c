@@ -10,7 +10,7 @@ int main(void)
 	int sum;
 
 	n = 1024;
-	while (n > 3)
+	while (n >= 3)
 	{
 		n--;
 		if (n % 3 == 0 || n % 5 == 0)
