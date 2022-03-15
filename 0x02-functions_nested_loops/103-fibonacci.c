@@ -5,13 +5,12 @@
  */
 int main(void)
 {
-	int i;
 	unsigned long int first;
 	unsigned long int second;
 	unsigned long int seq;
 	unsigned long int sum;
 
-	i = 3;
+
 	first = 1;
 	second = 2;
 	while (seq <= 4000000)
