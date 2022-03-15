@@ -24,9 +24,8 @@ int main(void)
 			printf("%ld, ", seq);
 		}
 		else
-			printf("%ld", seq);
+			printf("%ld\n", seq);
 		i++;
 	}
-	putchar('\n');
 	return (0);
 }
