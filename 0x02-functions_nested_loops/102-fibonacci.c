@@ -20,6 +20,7 @@ int main(void)
 		first = second;
 		second = seq;
 		printf("%d, ", seq);
+		i++;
 	}
 	putchar('\n');
 	return (0);
