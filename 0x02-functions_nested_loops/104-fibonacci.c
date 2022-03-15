@@ -14,7 +14,7 @@ int main(void)
 	first = 1;
 	second = 2;
 	printf("%ld, %ld, ", first, second);
-	while (i < 98)
+	while (i < 1)
 	{
 		seq = first + second;
 		first = second;
