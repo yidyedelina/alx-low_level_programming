@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * times_table -  print a time table 
+ * times_table -  print a time table
  * Return: void
  */
 void times_table(void)
@@ -13,26 +13,27 @@ void times_table(void)
 
 	for (i = 0; i <= 9; i++)
 	{
-		for(j = 0; j <= 9; j++)
+		for (j = 0; j <= 9; j++)
 		{
 			result = i * j;
 			i1 = result / 10;
 			i2 = result % 10;
-			if(result > 9)
+			if (result > 9)
 			{
 				_putchar(i1 + '0');
 				_putchar(i2 + '0');
 			}
 			else
 			{
-				if(j != 0){
+				if (j != 0)
+				{
 					_putchar(' ');
 					_putchar(result + '0');
 				}
 				else
 					_putchar(result + '0');
 			}
-			if(j != 9)
+			if (j != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
