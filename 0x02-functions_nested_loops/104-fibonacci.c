@@ -14,12 +14,12 @@ int main(void)
 	first = 1;
 	second = 2;
 	printf("%ld, %ld, ", first, second);
-	while (i <= 98)
+	while (i < 98)
 	{
 		seq = first + second;
 		first = second;
 		second = seq;
-		if (i != 98)
+		if (i != 97)
 		{
 			printf("%ld, ", seq);
 		}
