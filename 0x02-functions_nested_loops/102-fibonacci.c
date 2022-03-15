@@ -6,20 +6,20 @@
 int main(void)
 {
 	int i;
-	double first;
-	double second;
-	double seq;
+	long long first;
+	long long second;
+	long long seq;
 
 	i = 3;
 	first = 1;
 	second = 2;
-	printf("%f, %f, ", first, second);
+	printf("%d, %d, ", first, second);
 	while (i <= 50)
 	{
 		seq = first + second;
 		first = second;
 		second = seq;
-		printf("%f, ", seq);
+		printf("%d, ", seq);
 		i++;
 	}
 	putchar('\n');
