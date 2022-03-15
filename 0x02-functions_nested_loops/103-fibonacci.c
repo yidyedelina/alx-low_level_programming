@@ -25,7 +25,7 @@ int main(void)
 			sum = sum + seq;
 		}
 	}
-	printf("%ld", (sum+2));
+	printf("%ld", (sum + 2));
 	putchar('\n');
 	return (0);
 }
