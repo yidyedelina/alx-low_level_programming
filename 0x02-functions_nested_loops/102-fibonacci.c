@@ -6,9 +6,9 @@
 int main(void)
 {
 	int i;
-	unsigned long long int first;
-	unsigned long long int second;
-	unsigned long long int seq;
+	double first;
+	double second;
+	double seq;
 
 	i = 3;
 	first = 1;
