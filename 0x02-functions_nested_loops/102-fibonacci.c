@@ -13,13 +13,13 @@ int main(void)
 	i = 3;
 	first = 1;
 	second = 2;
-	printf("%d, %d, ", first, second);
+	printf("%f, %f, ", first, second);
 	while (i <= 50)
 	{
 		seq = first + second;
 		first = second;
 		second = seq;
-		printf("%d, ", seq);
+		printf("%f, ", seq);
 		i++;
 	}
 	putchar('\n');
