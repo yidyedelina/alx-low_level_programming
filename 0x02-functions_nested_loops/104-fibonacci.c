@@ -5,18 +5,26 @@
  */
 int main(void)
 {
-	int i = 0;
-	unsigned long int a = 0, b = 1, next = 0;
+	int i;
+	unsigned long int first;
+	unsigned long int second;
+	unsigned long int seq;
 
+	i = 3;
+	first = 1;
+	second = 2;
+	printf("%ld, %ld, ", first, second);
 	while (i <= 98)
 	{
-		next = a + b;
-		a = b;
-		b = next;
-		printf("%lu", next);
-
-		if (i < 97)
-			printf(", ");
+		seq = first + second;
+		first = second;
+		second = seq;
+		if (i != 98)
+		{
+			printf("%ld, ", seq);
+		}
+		else
+			printf("%ld", seq);
 		i++;
 	}
 	putchar('\n');
