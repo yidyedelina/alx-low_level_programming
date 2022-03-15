@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * main - Entry point
- * description: to print alphabet letters
- * Return: Always 0 (sucees)
+ * Description =to print alphabet letters
+ * Return: Always 0 (success)
  */
 void print_alphabet(void)
 {
