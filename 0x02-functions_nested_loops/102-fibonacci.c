@@ -21,6 +21,6 @@ int main(void)
 		second = seq;
 		printf("%d, ", seq);
 	}
-	printf('\n');
+	putchar('\n');
 	return (0);
 }
