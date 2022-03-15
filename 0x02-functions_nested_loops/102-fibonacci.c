@@ -19,7 +19,8 @@ int main(void)
 		seq = first + second;
 		first = second;
 		second = seq;
-		if(i != 50){
+		if (i != 50)
+		{
 			printf("%ld, ", seq);
 		}
 		else
