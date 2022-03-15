@@ -19,7 +19,11 @@ int main(void)
 		seq = first + second;
 		first = second;
 		second = seq;
-		printf("%ld, ", seq);
+		if(i != 50){
+			printf("%ld, ", seq);
+		}
+		else
+			printf("%ld", seq);
 		i++;
 	}
 	putchar('\n');
