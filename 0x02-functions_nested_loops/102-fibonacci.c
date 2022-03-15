@@ -14,7 +14,7 @@ int main(void)
 	first = 1;
 	second = 2;
 	printf("%d, %d, ", first, second);
-	while(i <= 50)
+	while (i <= 50)
 	{
 		seq = first + second;
 		first = second;
