@@ -15,31 +15,21 @@ void print_number(int n)
 		digit++;
 	}
 	tmp = n;
-	if(digit == 0)
-	{
+	if (digit == 0)
 		_putchar('0');
-	}
 	for (i = digit - 1; i >= 0; i--)
 	{
 		power = 1;
-		for(j = 1; j <= i; j++)
-		{
+		for (j = 1; j <= i; j++)
 			power = power * 10;
-		}
 		current = tmp / power;
 		tmp = tmp % power;
-		if(n < 0)
+		if (n < 0)
 		{
-			if(i == digit - 1)
-			{
-				current = -current;
+			current = -current;
+			if (i == digit - 1)
 				_putchar('-');
-				_putchar(current + '0');
-			}
-			else {
-				current = -current;
-				_putchar(current + '0');
-			}
+			_putchar(current + '0');
 		}
 		else
 		{
