@@ -33,6 +33,6 @@ int main(void)
 		}
 		count = 0;
 	}
-	printf("%ld", lt);
+	printf("%ld\n", lt);
 	return (0);
 }
