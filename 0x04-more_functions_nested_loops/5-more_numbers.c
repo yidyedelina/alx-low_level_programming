@@ -5,7 +5,7 @@
  */
 void more_numbers(void)
 {
-	int i, j,first, last;
+	int i, j, first, last;
 
 	i = 0;
 	j = 1;
@@ -14,8 +14,8 @@ void more_numbers(void)
 		while (i <= 14)
 		{
 			first = i / 10;
-			last = i % 10;	
-			if(i > 9)
+			last = i % 10;
+			if (i > 9)
 			{
 				_putchar(first + '0');
 			}
