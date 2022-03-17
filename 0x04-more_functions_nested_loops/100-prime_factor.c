@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int lt, count, i, j, num;
+	long int lt, count, i, j, num;
 
 	num = 612852475143;
 	lt = 1;
@@ -33,6 +33,6 @@ int main(void)
 		}
 		count = 0;
 	}
-	printf("%d", lt);
+	printf("%ld", lt);
 	return (0);
 }
