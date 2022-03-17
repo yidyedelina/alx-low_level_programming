@@ -23,7 +23,7 @@ int main(void)
 		{
 			if (i == 100)
 			{
-				printf("%d", i);
+				printf("Buzz");
 			}
 			else
 			{
