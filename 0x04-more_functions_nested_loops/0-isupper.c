@@ -2,8 +2,7 @@
 
 int _isupper(int c)
 {
-	int i;
-	if(i >= 65 && i <= 90)
+	if (c >= 65 && c <= 90)
 	{
 		return (1);
 	}
