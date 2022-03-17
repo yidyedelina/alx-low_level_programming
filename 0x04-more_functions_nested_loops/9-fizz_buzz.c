@@ -21,8 +21,15 @@ int main(void)
 		}
 		else if (i % 5 == 0)
 		{
-			printf("Buzz");
-			putchar(' ');
+			if (i == 100)
+			{
+				printf("%d", i);
+			}
+			else
+			{
+				printf("Buzz");
+				putchar(' ');
+			}
 		}
 		else
 		{
