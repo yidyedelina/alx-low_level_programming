@@ -5,6 +5,7 @@
  * @dest: the first string we need to concatente and return
  * @src: the second argument
  * n: the size of the string we need to concatenate
+ * Return: string returned
  */
 
 char *_strncat(char *dest, char *src, int n)
