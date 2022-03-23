@@ -13,7 +13,8 @@ int _strcmp(char *s1, char *s2)
 	len = strlen(s1);
 	for (i = 0; i < len && s2[i] != '\0';  i++)
 	{
-		if (s1[i] == s2[i]) continue;
+		if (s1[i] == s2[i])
+			continue;
 		else if (s1[i] > s2[i])
 		{
 			value = 1;
@@ -25,5 +26,5 @@ int _strcmp(char *s1, char *s2)
 			break;
 		}
 	}
-	return value;
+	return (value);
 }
