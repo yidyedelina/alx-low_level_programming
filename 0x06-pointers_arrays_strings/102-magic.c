@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - return nothing
+ * Return: alawys 1;
+ */
 int main(void)
 {
 	int n;
