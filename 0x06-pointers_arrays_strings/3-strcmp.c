@@ -15,12 +15,12 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (s1[i] == s2[i])
 			continue;
-		else if (s1[i] == '/0')
+		else if (s1[i] == '\0')
 		{
 			value = -15;
 			break;
 		}
-		else if (s2[i] == '/0')
+		else if (s2[i] == '\0')
 		{
 			value = 15;
 			break;
