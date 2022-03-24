@@ -12,6 +12,8 @@ char *cap_string(char *s)
 	bool exp;
 
 	len = strlen(s);
+	if(s[0] >= 97 && s[0] <= 122) 
+		s[0] = s[0] -32;
 	for (i = 0; i < len; i++)
 	{
 		exp = (s[i] == 32) || (s[i] == 44) || (s[i] == 40) ||
