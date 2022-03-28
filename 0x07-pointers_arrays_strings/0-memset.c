@@ -1,21 +1,20 @@
 #include "main.h"
-#include "string.h"
+
 /**
- * _memset() - a function that copy n bytes of the memory pointed by 
- * @s: a character
- * @b: a character
- * @n: an integer 
- * Return: the buffered string
+ * _memset - ironnou
+ * @s: pointer to char params
+ * @b: data to change
+ * @n: index
+ * Return: *s
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i = 0;
+	unsigned int i;
 
-	while (n > 0)
+	for (i = 0; i < n; i++)
 	{
 		s[i] = b;
-		i++;
-		n--;
 	}
 	return (s);
 }

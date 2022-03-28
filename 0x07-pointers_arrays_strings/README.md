@@ -1,1 +1,1 @@
-additional concept in c
+More on Pointers, Arrays and Strings
