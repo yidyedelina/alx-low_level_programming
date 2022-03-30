@@ -12,7 +12,7 @@ void rev_printer(char *s, int n)
 	if (n < 0)
 		return;
 	_putchar(*(s + n));
-	return rev_printer(s, n - 1);
+	rev_printer(s, n - 1);
 }
 
 /**
