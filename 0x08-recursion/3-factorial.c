@@ -4,6 +4,7 @@
  * @n: an integer to find factorial
  * Return: a factorial of a given n;
  */
+
 int factorial(int n)
 {
 	if (n < 0)
