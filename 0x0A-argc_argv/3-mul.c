@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+* main - an entry point
+* @argc: number of argument
+* @argv: a string of argument
+* return: always 0
+*/
 int main(int argc, char *argv[])
 {
 	if(argc < 3)
