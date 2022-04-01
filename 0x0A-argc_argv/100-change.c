@@ -1,65 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * calculate_cents - calculates and return cents
- * @num: input params
- * Return: coins
- */
-
-int calculate_cents(int num)
-{
-	int coins = 0;
-
-	while (num)
-	{
-		if (num >= 25)
-		{
-			num -= 25;
-		}
-		else if (num >= 10)
-		{
-			num -= 10;
-		}
-		else if (num >= 5)
-		{
-			num -= 5;
-		}
-		else if (num >= 2)
-		{
-			num -= 2;
-		}
-		else if (num >= 1)
-		{
-			num -= 1;
-		}
-		coins++;
-	}
-	return (coins);
-}
-
-/**
- * main - prints the minimum number of
- * coins to make change for an amount of money
- * @argc: amount of arguement
- * @argv: an array of inputs from argc
- *
- * Return: 0 for success
- */
-
+ * main - prints the minimum number of coins to make change for a given amount
+ * @argc: arguement count
+ * @argv: array of pointers to arguement strings
+ * Return: number of coins or 1
+ **/
 int main(int argc, char *argv[])
 {
-	int number;
+	int amount, coins;
 
 	if (argc != 2)
 	{
-		return (printf("Error\n"), 1);
+		printf("Error\n");
+		return (1);
 	}
-	number = atoi(argv[1]);
-	if (number < 0)
+	amount = atoi(argv[1]);
+	coins = 0;
+	if (amount > 25)
 	{
-		return (printf("Error\n"), 1);
+		while (amount >= 25)
+			amount -= 25, coins++;
 	}
-	printf("%d\n", calculate_cents(number));
+	if (amount > 10 && amount < 25)
+	{
+		while (amount >= 10)
+			amount -= 10, coins++;
+	}
+	if (amount > 5 && amount < 10)
+	{
+		while (amount >= 5)
+			amount -= 5, coins++;
+	}
+	if (amount > 2 && amount < 5)
+	{
+		while (amount >= 2)
+			amount -= 2, coins++;
+	}
+	if (amount == 1 || amount == 2 || amount == 5 || amount == 10 || amount == 25)
+	{
+		coins++;
+	}
+	printf("%d\n", coins);
 	return (0);
 }
