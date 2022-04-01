@@ -8,8 +8,11 @@
 */
 int main(int argc, char *argv[])
 {
-	if (argc < 3)
+	if (argc < 30)
+	{
 		puts("Error");
+		return (1);
+	}
 	else
 	{
 		long arg1 = strtol(argv[1], NULL, 10);
@@ -18,4 +21,5 @@ int main(int argc, char *argv[])
 
 		printf("%ld \n", mul);
 	}
+	return (0);
 }
