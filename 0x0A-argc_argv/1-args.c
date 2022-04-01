@@ -7,6 +7,10 @@
 */
 int main(int argc, char *argv[])
 {
+	char *p;
+	p = "char";
+	if(argv[0] == p)
+		printf("hello");
 	printf("%d \n", argc - 1);
 	return (0);
 }
