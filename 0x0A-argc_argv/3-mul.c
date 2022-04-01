@@ -1,25 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
-* main - an entry point
-* @argc: number of argument
-* @argv: a string of argument
-* Return: always 0
-*/
+ * main - multiplies two numbers
+ * @argc: n args
+ * @argv: arr args
+ * Return: 0
+ */
 int main(int argc, char *argv[])
 {
-	if (argc < 3 && argc > 3)
+	int i, val = 1;
+
+	if (argc != 3)
 	{
-		puts("Error");
+		printf("Error\n");
 		return (1);
 	}
-	else
+	for (i = 1; i < argc; i++)
 	{
-		long arg1 = strtol(argv[1], NULL, 10);
-		long arg2 = strtol(argv[2], NULL, 10);
-		long mul = arg1 * arg2;
-
-		printf("%ld \n", mul);
+		val *= atoi(argv[i]);
 	}
+	printf("%d\n", val);
 	return (0);
 }
