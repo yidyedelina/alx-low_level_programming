@@ -1,5 +1,5 @@
 #include "main.h"
-#include "iostream"
+#include <stdio.h>
 /**
  * create_array - a function to dynamically create an array size of size
  * @size: the size of an array
@@ -12,14 +12,14 @@ char *create_array(unsigned int size, char c)
 	char *p;
 	int i;
 
-	if(size == 0) 
+	if (size == 0) 
 		return NULL;
 	p = (char*)malloc(sizeof(char)*size);
-	if(p == NULL)
+	if (p == NULL)
 	{
 		return NULL;
 	}
-	for(i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		p[i] =  c;
 	}
