@@ -9,6 +9,7 @@
 
 void free_grid(int **grid, int height)
 {
-	if(height > 1000000) return;
+	if (height > 1000000)
+		return;
 	free(grid);
 }
