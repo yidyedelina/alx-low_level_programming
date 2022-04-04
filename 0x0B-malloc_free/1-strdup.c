@@ -4,20 +4,23 @@
 #include "string.h"
 /**
  * _strdup - a function which a copies a given string return a pointer to it
- * @str: a string 
+ * @str: a string
  * Return: NULL if unsuccessful allocation return
  * char pointer to copied string if allocation completed with success
  */
 char *_strdup(char *str)
 {
-	if(str == NULL)
+	if (str == NULL)
 		return (NULL);
-	int len = strlen(str);
+	int len;
+
+	len = strlen(str);
 	char *p = (char *)malloc(sizeof(char) * len);
 	int i;
-	if(p == NULL)
+
+	if (p == NULL)
 		return (NULL);
-	for(i = 0; i < len; i++)
+	for (i = 0; i < len; i++)
 	{
 		p[i] = str[i];
 	}
