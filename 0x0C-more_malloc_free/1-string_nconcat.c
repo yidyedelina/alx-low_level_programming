@@ -1,42 +1,39 @@
+#include "holberton.h"
 #include <stdlib.h>
-#include <string.h>
-#include "main.h"
-#include <stdio.h>
 /**
- * string_nconcat - concat two string given
- * @s1: the first string
- * @s2: the second string
- * @n: how many bytes of the second string concatenated
- * Return: a char pointer
- */
+ * *string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: limit of s2
+ * Return: pointer to new space in memory or null
+ **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	unsigned int len, len2;
+	char *strDup;
+	int i;
+	unsigned int j;
 
-	len = strlen(s2);
-	len2 = strlen(s1);
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	if (len >= n)
+	i = 0;
+	while (s1[i] != '\0')
+		i++;
+	strDup = malloc(sizeof(char) * (i + n + 1));
+	if (strDup == NULL)
+		return (NULL);
+	i = j = 0;
+	while (s1[i] != '\0')
 	{
-		p = (char *)malloc((len2 + n + 1)* sizeof(char));
-		if (p == NULL)
-			return (NULL);
-		strcpy(p, s1);
-		strncpy(p + len2, s2, n);
-		p[len + n] = '\0'; 
+		strDup[i] = s1[i];
+		i++;
 	}
-	if (len <= n)
+	while (j < n && s2[j] != '\0')
 	{
-		p = (char *)malloc(len2 + len + 1);
-		if (p == NULL)
-			return (NULL);
-		strcpy(p, s1);
-		strncpy((p + len2), s2, len);
-		p[len + len2] = '\0';
+		strDup[i] = s2[j];
+		i++, j++;
 	}
-	return (p);
+	strDup[i] = '\0';
+	return (strDup);
 }
