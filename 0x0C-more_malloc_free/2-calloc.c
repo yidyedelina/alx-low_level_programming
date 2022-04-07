@@ -1,5 +1,6 @@
 #include "main.h"
 #include "stdlib.h"
+#include "string.h"
 /**
  * _calloc - a function that assign a block of memory and fill them with 0
  * @nmemb: the number of element
@@ -9,7 +10,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int *p;
-	int len, i;
+	int len;
 
 	len = size * nmemb;
 	p = malloc(len);
