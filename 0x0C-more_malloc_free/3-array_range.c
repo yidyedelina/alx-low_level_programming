@@ -1,5 +1,6 @@
 #include "main.h"
 #include "stdlib.h"
+#include "stdio.h"
 /**
  * array_range - create an array contain element in a range
  * @min: start of the array
@@ -8,10 +9,11 @@
  */
 int *array_range(int min, int max)
 {
-	int len, i, j = 0;
+	unsigned int len;
+	int i, j = 0;
 	int *p;
 
-	len = max - min;
+	len = max - min + 1;
 	if (min > max)
 		return (NULL);
 	p = (int *)malloc(len * sizeof(int));
