@@ -1,4 +1,5 @@
 #include "dog.h"
+#include "string.h"
 /**
  * new_dog - a function that create a new instance of dog;
  * @name: the name of the dog
@@ -13,8 +14,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (new == NULL)
 		return (NULL);
-	new->name = name;
+	new->name = malloc(sizeof(name));
+	if (new->name == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
+	new->owner = malloc(sizeof(owner));
+	if (new->owner == NULL)
+	{
+		free(new->name);
+		free(new);
+		return (NULL);
+	}
+	strcpy(new->name, name);
+	strcpy(new->owner, owner);
 	new->age = age;
-	new->owner = owner;
 	return (new);
 }
