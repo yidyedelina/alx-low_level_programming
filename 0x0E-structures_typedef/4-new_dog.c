@@ -1,57 +1,34 @@
 #include "dog.h"
+#include "string.h"
 /**
- * *_strcpy - copy string
- * @dest: char to test
- * @src: char to test
- *
- * Return: char
+ * new_dog - a function that create a new instance of dog;
+ * @name: the name of the dog
+ * @age: the age of the dog
+ * @owner: the owner of the dog
+ * Return: the adress of the new dog
  */
-char *_strcpy(char *dest, char *src)
-{
-int i;
 
-for (i = 0; src[i] != '\0'; i++)
-{
-dest[i] = src[i];
-}
-
-dest[i] = '\0';
-return (dest);
-}
-
-/**
- * new_dog - Creates a new structure dog
- * @name: Name of the dog
- * @age: Age of the dog
- * @owner: Owner of the dog
- * Return: Return a pointer to the structure
- */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *ptr;
+	dog_t *new = (dog_t *)malloc(sizeof(dog_t));
 
-	ptr = malloc(sizeof(dog_t));
-	if (ptr == NULL)
+	if (new == NULL)
 		return (NULL);
-
-	(*ptr).name = malloc(sizeof(name) + 1);
-	if (name == NULL)
+	new->name = malloc(sizeof(name) + 1);
+	if (new->name == NULL)
 	{
-		free(ptr);
+		free(new);
 		return (NULL);
 	}
-
-	(*ptr).owner = malloc(sizeof(owner) + 1);
-	if ((*ptr).owner == NULL)
+	new->owner = malloc(sizeof(owner) + 1);
+	if (new->owner == NULL)
 	{
-		free((*ptr).name);
-		free(ptr);
+		free(new->name);
+		free(new);
 		return (NULL);
 	}
-
-	_strcpy((*ptr).name, name);
-	_strcpy((*ptr).owner, owner);
-	(*ptr).age = age;
-
-	return (ptr);
+	strcpy(new->name, name);
+	strcpy(new->owner, owner);
+	new->age = age;
+	return (new);
 }
