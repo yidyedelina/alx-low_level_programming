@@ -1,12 +1,15 @@
 #include "function_pointers.h"
+
 /**
- * print_name - print the name of given value
- * @name: name of the person
- * @f: a callback function
- * Return: Nothing
+ * print_name - entry piint from main
+ * @name: String of name
+ * @f:	Entry to another function
  */
+
 void print_name(char *name, void (*f)(char *))
+
 {
-	if (name != NULL && *name != '\0' && f != NULL)
-		(*f)(name);
+	if (f == NULL || name == NULL)
+		return;
+	f(name);
 }
