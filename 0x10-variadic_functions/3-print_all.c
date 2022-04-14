@@ -1,51 +1,96 @@
 #include "variadic_functions.h"
-#include "string.h"
 /**
- * print_all - prints all arguments passed to it
- * @format: list of argument types
+* print_char - Function that display a char.
+*
+*@arg: va_list variable.
+*
+*Return: Void.
+*/
+void print_char(va_list arg)
+{
+	printf("%c", va_arg(arg, int));
+}
+/**
+* print_int - Function that display an integer.
+*
+*@arg: va_list variable.
+*
+*Return: Void.
+*/
+void print_int(va_list arg)
+{
+	printf("%d", va_arg(arg, int));
+}
+/**
+*print_str - Function that display a string.
+*
+*@arg: va_list variable.
+*
+*Return: Void.
+*/
+void print_str(va_list arg)
+{
+	char *str = va_arg(arg, char *);
+
+	if (str)
+	{
+		printf("%s", str);
+		return;
+	}
+	printf("%p", str);
+}
+/**
+*print_float - Function that display a float.
+*
+*@arg: va_list variable.
+*
+*Return: Void.
+*/
+void print_float(va_list arg)
+{
+	printf("%f", va_arg(arg, double));
+}
+
+/**
+ *print_all - function that print according to a string parameter.
  *
- * Return: void
+ *@format: string paramater.
+ *
+ *Return: Void.
  */
+
 void print_all(const char * const format, ...)
 {
-va_list arguments;
-char *tempstring;
-int i;
+	Printer  Corr[] = {
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_str},
+		{0, NULL}
+	};
+	unsigned int i = 0, j = 0;
+	va_list ap;
+	char *separator = "";
 
-va_start(arguments, format);
-i = 0;
-while (format == NULL)
-{
-printf("\n");
-return;
-}
-while (format[i] != '\0')
-{
-switch (format[i])
-{
-case 'c':
-printf("%c", (char) va_arg(arguments, int));
-break;
-case 'i':
-printf("%d", va_arg(arguments, int));
-break;
-case 'f':
-printf("%f", (float) va_arg(arguments, double));
-break;
-case 's':
-tempstring = va_arg(arguments, char*);
-if (tempstring != NULL)
-{
-printf("%s", tempstring);
-break;
-}
-printf("(nil)");
-break;
-}
-if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
-format[i] == 's') && format[(i + 1)] != '\0')
-printf(", ");
-i++;
-}
-printf("\n");
+	va_start(ap, format);
+	while (format && format[i])
+	{
+		j = 0;
+		while (Corr[j].op)
+		{
+			if (Corr[j].op == format[i])
+			{
+				printf("%s", separator);
+				Corr[j].f(ap);
+				separator = ", ";
+				break;
+			}
+			j++;
+		}
+		i++;
+	}
+
+	va_end(ap);
+	printf("\n");
+
 }
