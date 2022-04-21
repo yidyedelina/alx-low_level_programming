@@ -9,12 +9,7 @@ size_t print_list(const list_t *h)
 	size_t i = 0, len;
 	char *s;
 	const list_t *traverse = h;
-
-	if (h == NULL)
-	{
-		printf("[0] (nil)");
-		return (0);
-	}
+	
 	while (traverse != NULL)
 	{
 		s = traverse->str;
