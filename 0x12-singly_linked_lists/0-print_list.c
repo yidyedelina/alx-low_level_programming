@@ -9,7 +9,7 @@ size_t print_list(const list_t *h)
 	size_t i = 0, len;
 	char *s;
 	const list_t *traverse = h;
-	
+
 	while (traverse != NULL)
 	{
 		s = traverse->str;
