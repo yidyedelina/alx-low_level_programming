@@ -11,12 +11,14 @@ void free_listint2(listint_t **head)
 	listint_t *tmp;
 	listint_t *traverse;
 
-	traverse = (*head)->next;
-	head = NULL;
+	if(head == NULL)
+		return;
+	traverse = (*head);
 	while (traverse != NULL)
 	{
 		tmp = traverse;
 		traverse = traverse->next;
 		free(tmp);
 	}
+	*head = NULL;
 }
