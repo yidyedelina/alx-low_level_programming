@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
  * _check_and_free - free a list
  * @head: of the list
