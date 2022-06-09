@@ -21,8 +21,12 @@ int _strlen(char *s)
 	}
 	return (count);
 }
-
-
+/**
+ * f4 - gen
+ * @len: length
+ * @argv:arguments
+ * Return: int
+ */
 int f4(int len, char *argv)
 {
 	int i = 0, j = 0;
@@ -37,7 +41,12 @@ int f4(int len, char *argv)
 	i = rand();
 	return (i);
 }
-
+/**
+ * f5 - gen
+ * @len:length
+ * @argv:arguments
+ * Return: int
+ */
 
 int f5(int len, char *argv)
 {
@@ -53,7 +62,11 @@ int f5(int len, char *argv)
 	j = (j ^ 239) & 63;
 	return (j);
 }
-
+/**
+ * f6 - gen
+ * @argv:arguments
+ * Return: int
+ */
 
 int f6(char *argv)
 {
@@ -71,8 +84,8 @@ int f6(char *argv)
 }
 /**
  * main - Generates and prints passwords for the crackme5 executable.
- * @argc:
- * @argv:
+ * @argc: number of arguments
+ * @argv: arguments
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
