@@ -7,14 +7,14 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-    const dlistint_t *traverse = h;
-    int n = 0;
+	const dlistint_t *traverse = h;
+	int n = 0;
 
-    while (traverse != NULL)
-    {
-        printf("%d\n", traverse->n);
-        n++;
-        traverse = traverse->next;
-    }
-    return (n);
+	while (traverse != NULL)
+	{
+		printf("%d\n", traverse->n);
+		n++;
+		traverse = traverse->next;
+	}
+	return (n);
 }
