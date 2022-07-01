@@ -1,8 +1,7 @@
-
-
 #include "hash_tables.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 /**
  *shash_table_create - creates an ordered hash table
  *@size: size of the array
